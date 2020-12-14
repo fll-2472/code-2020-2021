@@ -6,7 +6,7 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
-from drive_tools.p_control import straight_line
+from drive_tools.straight_line import straight_line
 
 
 
@@ -22,6 +22,8 @@ gyro = GyroSensor(Port.S3, Direction.COUNTERCLOCKWISE)
 
 drive_base = DriveBase(left_motor, right_motor, 62.4, 15)
 
-straight_line(-42.42, -200, 8000, drive_base, gyro)
+straight_line(-45, -200, 1300, drive_base, gyro)
+wait(2000)
+straight_line(0, -200, 3000, drive_base, gyro)
 
 
