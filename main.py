@@ -21,4 +21,3 @@ right_color_sensor = ColorSensor(Port.S1)
 drive_base = DriveBase(left_motor, right_motor, 62.4, 15)
 
 
-follow_line(-200, 5000, drive_base, right_color_sensor)
