@@ -11,7 +11,7 @@ threshold = (BLACK + WHITE) / 2
 PROPORTIONAL_GAIN = 1.2
 
 def follow_line(speed, duration, drive_base, color_sensor):
-    while True:
+    while timer.time() <duration:
         deviation = color_sensor.reflection() - threshold
 
         turn_rate = PROPORTIONAL_GAIN * deviation
