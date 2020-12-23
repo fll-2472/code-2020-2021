@@ -19,5 +19,3 @@ gyro = GyroSensor(Port.S3, Direction.COUNTERCLOCKWISE)
 left_color_sensor = ColorSensor(Port.S4)
 right_color_sensor = ColorSensor(Port.S1)
 drive_base = DriveBase(left_motor, right_motor, 62.4, 15)
-
-
