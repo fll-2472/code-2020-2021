@@ -8,6 +8,7 @@ from pybricks.tools import wait
 from runs.run2 import run_2
 from runs.run3 import run_3
 from runs.run4 import run_4
+from essential.Object_creator import left_mission_motor
 
 ev3 = EV3Brick()
 button = ev3.buttons
