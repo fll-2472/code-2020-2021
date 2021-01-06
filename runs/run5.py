@@ -7,12 +7,12 @@ from drive_tools.straight_line import straight_line
 from essential.Object_creator import drive_base
 
 def run_5():
-    straight_line(0, -100, 800, drive_base)
+    straight_line(0, -100, 800)
     wait(1000)
     right_mission_motor.dc(-60)
     wait(3000)
     right_mission_motor.dc(50)
     wait(1200)
     right_mission_motor.dc(0)
-    straight_line(0, 200, 2000, drive_base)
+    straight_line(0, 200, 2000)
     wait(10)

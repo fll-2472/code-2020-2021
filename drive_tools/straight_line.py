@@ -1,8 +1,8 @@
 from pybricks.tools import StopWatch
-from pybricks.robotics import DriveBase
 from pybricks.ev3devices import GyroSensor
 from pybricks.parameters import Port
 from essential.Object_creator import gyro
+from essential.Object_creator import drive_base
 
 K_P = 20 
     
@@ -10,7 +10,7 @@ def p_controller(set_point):
     return K_P * (set_point - gyro.angle())
 
 
-def straight_line(angle, speed, duration, drive_base):
+def straight_line(angle, speed, duration):
     timer = StopWatch()
 
     while timer.time() <= duration: 
