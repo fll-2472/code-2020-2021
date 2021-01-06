@@ -3,5 +3,5 @@ from essential.Object_creator import left_mission_motor
 from essential.Object_creator import right_color_sensor, left_color_sensor
 from essential.Object_creator import right_motor, left_motor
 
-def run_5(left_mission_motor):
+def run_9(left_mission_motor):
     left_mission_motor.run(200)

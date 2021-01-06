@@ -8,6 +8,15 @@ from pybricks.tools import wait
 from runs.run2 import run_2
 from runs.run3 import run_3
 from runs.run4 import run_4
+from runs.run5 import run_5
+from runs.run6 import run_6
+from runs.run7 import run_7
+from runs.run8 import run_8
+from runs.run9 import run_9
+from runs.run10 import run_10
+from runs.run11 import run_11
+from runs.run12 import run_12
+from runs.run13 import run_13
 from essential.Object_creator import left_mission_motor
 
 ev3 = EV3Brick()
@@ -31,10 +40,10 @@ def run_pick():
         if Button.CENTER in button.pressed():
             getattr(sys.modules[__name__], "run_{}".format(run_number))(left_mission_motor)
             wait(400)
-        if run_number >=5:
+        if run_number >=13:
             run_number = 1
         if run_number <=0:
-            run_number = 4
+            run_number = 13
         if button.pressed():
             screen.clear()
             wait(10)
