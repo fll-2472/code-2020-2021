@@ -11,7 +11,7 @@ setpoint = (BLACK + WHITE) / 2
 
 K_P = 3.65
 
-def follow_line_right(speed, duration):
+def follow_line_right(speed, duration):  
     while timer.time() <duration:
         deviation = color_sensor.reflection() - setpoint
 
