@@ -38,7 +38,7 @@ def run_pick():
             run_number = run_number - 1
             wait(400)
         if Button.CENTER in button.pressed():
-            getattr(sys.modules[__name__], "run{}".format(run_number))()
+            getattr(sys.modules[__name__], "run_{}".format(run_number))()
             wait(400)
         if run_number >=5:
             run_number = 1
