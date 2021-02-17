@@ -40,10 +40,10 @@ def run_pick():
         if Button.CENTER in button.pressed():
             getattr(sys.modules[__name__], "run_{}".format(run_number))()
             wait(400)
-        if run_number >=13:
+        if run_number >=5:
             run_number = 1
         if run_number <=0:
-            run_number = 13
+            run_number = 4
         if button.pressed():
             screen.clear()
             wait(10)
