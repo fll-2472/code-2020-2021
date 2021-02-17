@@ -24,5 +24,14 @@ def straight_line_distance(angle, speed, distance):
     while abs(drive_base.distance()) <= distance:
         fix_amount=p_controller(angle, gyro)
 
-        drive_base.drive(speed, -fix_amount)      
+        drive_base.drive(speed, -fix_amount)    
+    drive_base.stop()  
 
+def straight_line_light(angle, speed, color_sensor):
+    gyro.reset_angle(0)
+    drive_base.reset()
+    while color_sensor.reflection() >= 60:
+        fix_amount=p_controller(angle, gyro)
+
+        drive_base.drive(speed, -fix_amount)    
+    drive_base.stop()  
