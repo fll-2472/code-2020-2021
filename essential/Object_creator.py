@@ -6,7 +6,10 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-#Add more obgect only here enless ther
+#Add more obgect only here enless there
+ev3 = EV3Brick()
+button = ev3.buttons
+screen = ev3.screen
 right_motor = Motor(Port.C)
 left_motor =Motor(Port.D)
 right_mission_motor = Motor(Port.A)
