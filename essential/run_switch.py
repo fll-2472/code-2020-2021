@@ -17,11 +17,9 @@ from runs.run10 import run_10
 from runs.run11 import run_11
 from runs.run12 import run_12
 from runs.run13 import run_13
-from essential.Object_creator import left_mission_motor
+from essential.Object_creator import screen, button, ev3
 
-ev3 = EV3Brick()
-button = ev3.buttons
-screen = ev3.screen
+
 
 wait(10)
 
