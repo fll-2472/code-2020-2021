@@ -12,7 +12,7 @@ def p_controller(set_point, gyro):
 
 def straight_line(angle, speed, duration):
     timer = StopWatch()
-    
+    gyro.reset_angle(0)
     while timer.time() <= duration: 
 
         fix_amount=p_controller(angle, gyro)
@@ -20,6 +20,7 @@ def straight_line(angle, speed, duration):
     
 def straight_line_distance(angle, speed, distance):
     drive_base.reset()
+    gyro.reset_angle(0)
     while abs(drive_base.distance()) <= distance:
         fix_amount=p_controller(angle, gyro)
 

@@ -8,9 +8,9 @@ from essential.Object_creator import gyro
 
 def run_2():
     gyro.reset_angle(0)
-    straight_line_distance(-15, -100, 80)
-    straight_line_distance(-1, -150, 750)
-    straight_line(-5, -30, 9000)
+    straight_line_distance(-15, -100, 120)
+    straight_line_distance(15, -150, 750)
+    straight_line_distance(0, -30, 100)
     straight_line_distance(45, 100, 120)
     straight_line_distance(0, -150, 750)
     # straight_line(0, -100, 1700)
