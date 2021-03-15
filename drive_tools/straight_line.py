@@ -12,7 +12,6 @@ def p_controller(set_point, gyro):
 
 def straight_line(angle, speed, duration):
     timer = StopWatch()
-    gyro.reset_angle(0)
     while timer.time() <= duration: 
 
         fix_amount=p_controller(angle, gyro)
@@ -20,7 +19,6 @@ def straight_line(angle, speed, duration):
     
 def straight_line_distance(angle, speed, distance):
     drive_base.reset()
-    gyro.reset_angle(0)
     while abs(drive_base.distance()) <= distance:
         fix_amount=p_controller(angle, gyro)
 
@@ -28,7 +26,6 @@ def straight_line_distance(angle, speed, distance):
     drive_base.stop()  
 
 def straight_line_light_white(angle, speed, color_sensor):
-    gyro.reset_angle(0)
     drive_base.reset()
     while color_sensor.reflection() >= 60:
         fix_amount=p_controller(angle, gyro)
@@ -37,7 +34,6 @@ def straight_line_light_white(angle, speed, color_sensor):
     drive_base.stop()  
 
 def straight_line_light_black(angle, speed, color_sensor):
-    gyro.reset_angle(0)
     drive_base.reset()
     while color_sensor.reflection() <= 10:
         fix_amount=p_controller(angle, gyro)
