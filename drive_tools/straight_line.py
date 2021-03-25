@@ -23,6 +23,8 @@ def straight_line_distance(angle, speed, distance):
     while abs(drive_base.distance()) <= distance:
         fix_amount=p_controller(angle, gyro)
 
+        screen.print(gyro.angle())
+
         drive_base.drive(speed, -fix_amount)    
     drive_base.stop()  
 
