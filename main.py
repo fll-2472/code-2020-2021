@@ -2,4 +2,3 @@
 from essential.run_switch import run_pick
 
 run_pick()
-
