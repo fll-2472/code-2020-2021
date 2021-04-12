@@ -1,7 +1,7 @@
 from pybricks.ev3devices import Motor, ColorSensor
 from pybricks.parameters import Port
 from pybricks.tools import wait
-from essential.Object_creator import right_color_sensor, left_color_sensor
+from essential.Object_creator import right_color_sensor, left_color_sensor, screen
 from pybricks.tools import StopWatch
 from essential.Object_creator import drive_base
 
@@ -17,6 +17,7 @@ def follow_line_right(speed, duration):
     while timer.time() <duration:
         deviation = right_color_sensor.reflection() - setpoint
         turn_rate = K_P * deviation
+        # screen.print(right_color_sensor.reflection())
 
         drive_base.drive(speed, turn_rate)
 
