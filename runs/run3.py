@@ -11,5 +11,5 @@ def run_3():
   # straight_line_light_black(0, -1000, right_color_sensor)
   straight_line_distance(0, -100, 900)
   turn(-90, 2)
-  straight_line_distance(-80, -100, 80)
-  straight_line_distance(-90, -100, 200)
+  straight_line_distance(-20, -100, 120)
+  straight_line_distance(-90, -100, 500)
