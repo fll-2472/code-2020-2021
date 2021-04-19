@@ -8,7 +8,7 @@ from drive_tools.turn import turn
 
 def run_3():
   gyro.reset_angle(0)
- # straight_line_light_black(0, -1000, right_color_sensor)
+  # straight_line_light_black(0, -1000, right_color_sensor)
   straight_line_distance(0, -100, 900)
   turn(-90, 2)
   straight_line_distance(-80, -100, 80)
