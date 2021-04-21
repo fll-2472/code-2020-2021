@@ -14,10 +14,10 @@ K_P = 3.65
 
 def follow_line_right(speed, duration): 
     timer=StopWatch() 
-    while timer.time() <duration:
+    while timer.time() <=duration:
         deviation = right_color_sensor.reflection() - setpoint
         turn_rate = K_P * deviation
-        # screen.print(right_color_sensor.reflection())
+        screen.print(right_color_sensor.reflection())
 
         drive_base.drive(speed, turn_rate)
 
@@ -28,6 +28,30 @@ def follow_line_left(speed, duration):
         deviation = color_sensor.reflection() - setpoint
 
         turn_rate = K_P * deviation
+
+        drive_base.drive(speed, turn_rate)
+
+        wait(10)
+
+def follow_line_distance_right(speed, distance): 
+    timer=StopWatch()
+    drive_base.reset() 
+    while abs(drive_base.distance()) <= distance:
+        deviation = right_color_sensor.reflection() - setpoint
+        turn_rate = K_P * deviation
+        screen.print(right_color_sensor.reflection())
+
+        drive_base.drive(speed, turn_rate)
+
+        wait(10)
+
+def follow_line_distance_left(speed, distance): 
+    timer=StopWatch() 
+    drive_base.reset()
+    while abs(drive_base.distance()) <= distance:
+        deviation = left_color_sensor.reflection() - setpoint
+        turn_rate = K_P * deviation
+        screen.print(left_color_sensor.reflection())
 
         drive_base.drive(speed, turn_rate)
 
