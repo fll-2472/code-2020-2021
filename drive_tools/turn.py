@@ -15,3 +15,13 @@ def turn(angle, threshold):
         fix_amount=p_controller(angle, gyro)
         drive_base.drive(0, -fix_amount)
 
+def turn_black(angle, threshold):
+    while color_sensor.reflection() <= 10: 
+        fix_amount=p_controller(angle, gyro)
+        drive_base.drive(0, -fix_amount)
+
+def turn_white(angle, threshold):
+    while color_sensor.reflection() >= 60:
+        fix_amount=p_controller(angle, gyro)
+        drive_base.drive(0, -fix_amount)
+
