@@ -16,6 +16,6 @@ right_mission_motor = Motor(Port.A)
 left_mission_motor = Motor(Port.B)
 gyro = GyroSensor(Port.S3, Direction.COUNTERCLOCKWISE)
 left_color_sensor = ColorSensor(Port.S4)
-right_color_sensor = ColorSensor(Port.S1)
+right_color_sensor = ColorSensor(Port.S2)
 drive_base = DriveBase(left_motor, right_motor, 62.4, 15)
 

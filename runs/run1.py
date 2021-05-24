@@ -7,17 +7,20 @@ from drive_tools.turn import turn
 import os
 from essential.Object_creator import drive_base
 from essential.Object_creator import right_mission_motor
+from pybricks.tools import wait
 
 def run_1():
     gyro.reset_angle(0)
     straight_line_distance(0, -300, 100)
+    wait(500)
     straight_line_distance(-50, -100, 50)
-    straight_line_distance(-50, -100, 85)
-    straight_line_distance(17, -2000, 400)
-    straight_line_distance(17, 100, 70)
+    straight_line_distance(-50, -100, 75)
+    straight_line_distance(17, -2000, 500)
+    straight_line_distance(17, 100, 60)
     turn(-25, 2)
-    turn(17, 2)
-    straight_line_distance(16, -100, 200)
+    turn(18, 2)
+    straight_line_distance(18, 100, 50)
+    straight_line_distance(10, -100, 250)
     right_mission_motor.run_time(200, 1500)
     straight_line_distance(0, 300, 400)
     drive_base.stop()
